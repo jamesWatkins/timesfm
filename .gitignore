@@ -7,3 +7,8 @@ datasets/
 results/
 timesfm_jax.egg-info/
 development_setup.md
+mlruns/
+local/
+.ipynb_checkpoints/
+*.egg-info/
+outputs/

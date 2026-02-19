@@ -27,3 +27,18 @@ try:
   TimesFM_2p5_200M_flax = timesfm_2p5_flax.TimesFM_2p5_200M_flax
 except ImportError:
   pass
+
+try:
+  from .finetuning import (
+    BaseTrainAdapter,
+    FinetuneForwardOutput,
+    FinetuningConfig,
+    FinetuningResult,
+    TimeSeriesWindowDataset,
+    TimesFMFinetuner,
+    TimesFMTorchTrainAdapter,
+    WindowingConfig,
+    create_collate_fn,
+  )
+except ImportError:
+  pass
