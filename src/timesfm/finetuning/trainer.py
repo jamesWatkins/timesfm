@@ -101,6 +101,10 @@ class TimesFMFinetuner:
     except Exception as exc:  # pragma: no cover - defensive logging
       print(f"Warning: MLflow log_params failed: {exc}")
 
+  def log_params(self, params: dict[str, object]) -> None:
+    """Public wrapper for optional MLflow parameter logging."""
+    self._mlflow_log_params(params)
+
   def _mlflow_log_metrics(self, metrics: dict[str, float], step: int | None) -> None:
     if not self._mlflow_enabled or self._mlflow is None:
       return
